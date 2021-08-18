@@ -22,7 +22,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 #clone workshop material
 git clone https://github.com/idevops-academy/DevOps-Workshop.git
-cd /DevOps-Workshop/S2-Understanding_Jenkins
+cd /DevOps-Workshop/S3-Mastering_Continuous_Integration
 
 #Run Jenkins Container
 docker-compose up -d
