@@ -1,0 +1,21 @@
+#!/bin/bash
+#update
+sudo yum update –y
+
+#install git
+sudo yum install -y git
+
+# get repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade
+
+#install
+sudo yum install jenkins java-1.8.0-openjdk-devel -y
+
+# start
+sudo systemctl daemon-reload
+sudo systemctl start jenkins
+
+# make jenkins auto start
+sudo chkconfig jenkins on
